@@ -10,9 +10,9 @@
 		<meta name="medium" content="mult" />
 		<meta name="video_height" content="480"></meta>
 		<meta name="video_width" content="640"></meta>
-		<link rel="image_src" href="111testdata/thumbnail.jpg" />
+		<link rel="image_src" href="indexdata/thumbnail.jpg" />
 		<!-- <meta name="directory" content="PATH/"></meta> -->
-		<!-- <link rel="target_url" href="111test.html" /> -->
+		<!-- <link rel="target_url" href="index.html" /> -->
 		<meta name="generator" content="Panotour Pro V2.5.1 64bits" />
 
 		<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
@@ -42,26 +42,34 @@
 			}
 		</style>
 				<!--[if !IE]><!-->
-		<script type="text/javascript" src="111testdata/lib/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="indexdata/lib/jquery-2.1.1.min.js"></script>
 		<!--<![endif]-->
 		<!--[if lte IE 8]>
-		<script type="text/javascript" src="111testdata/lib/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="indexdata/lib/jquery-1.11.1.min.js"></script>
 		<![endif]-->
 		<!--[if gt IE 8]>
-		<script type="text/javascript" src="111testdata/lib/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="indexdata/lib/jquery-2.1.1.min.js"></script>
 		<![endif]-->
+
+
+		<link type="text/css" href="indexdata/lib/jquery-ui-1.11.1/jquery-ui.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="indexdata/lib/jquery-ui-1.11.1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="indexdata/lib/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="indexdata/lib/Kolor/KolorTools.min.js"></script>
+		<script type="text/javascript" src="indexdata/graphics/KolorBootstrap.js"></script>
+
 
 
 		<style type="text/css">
 			div#panoDIV.cursorMoveMode {
 				cursor: move;
-				cursor: url(111testdata/graphics/cursors_move_html5.cur), move;
+				cursor: url(indexdata/graphics/cursors_move_html5.cur), move;
 			}
 			div#panoDIV.cursorDragMode {
 				cursor: grab;
 				cursor: -moz-grab;
 				cursor: -webkit-grab;
-				cursor: url(111testdata/graphics/cursors_drag_html5.cur), default;
+				cursor: url(indexdata/graphics/cursors_drag_html5.cur), default;
 			}
 		</style>
 
@@ -113,10 +121,14 @@
 			function accessWebVr(){
 				unloadPlayer();
 
+				eventUnloadPlugins();
+
 				setTimeout(function(){ loadPlayer(true); }, 100);
 			}
 			function accessStdVr(){
 				unloadPlayer();
+
+				resetValuesForPlugins();
 
 				setTimeout(function(){ loadPlayer(false); }, 100);
 			}
@@ -124,7 +136,7 @@
 				if (isWebVr) {
 					embedpano({
 						id:"krpanoSWFObject"
-						,xml:"111testdata/111test_vr.xml"
+						,xml:"indexdata/index_vr.xml"
 						,target:"panoDIV"
 						,passQueryParameters:true
 						,bgcolor:"#000000"
@@ -135,7 +147,7 @@
 					embedpano({
 						id:"krpanoSWFObject"
 
-						,swf:"111testdata/111test.swf"
+						,swf:"indexdata/index.swf"
 
 						,target:"panoDIV"
 						,passQueryParameters:true
@@ -143,6 +155,8 @@
 
 						,html5:"prefer"
 
+
+						,wmode: getWmodeValue()
 
 					});
 				}
@@ -175,12 +189,12 @@
 				<div id="panoDIV">
 					<noscript>
 
-						<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100%" height="100%" id="111testdata/111test">
-							<param name="movie" value="111testdata/111test.swf"/>
+						<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100%" height="100%" id="indexdata/index">
+							<param name="movie" value="indexdata/index.swf"/>
 							<param name="allowFullScreen" value="true"/>
 							<!--[if !IE]>-->
-							<object type="application/x-shockwave-flash" data="111testdata/111test.swf" width="100%" height="100%">
-								<param name="movie" value="111testdata/111test.swf"/>
+							<object type="application/x-shockwave-flash" data="indexdata/index.swf" width="100%" height="100%">
+								<param name="movie" value="indexdata/index.swf"/>
 								<param name="allowFullScreen" value="true"/>
 								<!--<![endif]-->
 								<a href="http://www.adobe.com/go/getflash">
@@ -194,7 +208,7 @@
 					</noscript>
 				</div>
 
-				<script type="text/javascript" src="111testdata/111test.js"></script>
+				<script type="text/javascript" src="indexdata/index.js"></script>
 				<script type="text/javascript">
 					if (isVRModeRequested()){
 						accessWebVr();
