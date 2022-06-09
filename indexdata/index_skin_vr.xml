@@ -64,19 +64,6 @@
 
 
 
-<!-- ********** -->
-<!-- Previous/Next Keys -->
-<!-- id : prevNextKeys -->
-<!-- ********** -->
-
-
-<events name="prevNextKeysEvents" 
-	keep="true" 
-	onkeyup="if(keycode == 33,loadPreviousScene();
-,if(keycode == 34,loadNextScene();
-););" 
-	/>
-
 <action name="setViewNormal">
 	stopSetViewTweens();
 	if(current_view_isflat === true,

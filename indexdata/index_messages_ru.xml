@@ -9,18 +9,19 @@
 
 
 
-  <data name="ru_pano37_title"><![CDATA[220 кабинет]]></data>
-  <data name="ru_spotpolygon53_tooltip"><![CDATA[Кабинет 2]]></data>
-  <data name="ru_spotpolygon106_tooltip"><![CDATA[Парикхмахерская]]></data>
+  <data name="ru_pano1214_title"><![CDATA[220]]></data>
+  <data name="ru_spotpolygon1220_tooltip"><![CDATA[Парикхмахерская]]></data>
+  <data name="ru_spotpolygon1225_tooltip"><![CDATA[2 кабинет]]></data>
 
 
-  <data name="ru_pano38_title"><![CDATA[Кабинет 2]]></data>
-  <data name="ru_spotpolygon54_tooltip"><![CDATA[220 кабинет]]></data>
+  <data name="ru_pano1216_title"><![CDATA[2 кабинет]]></data>
+  <data name="ru_spotpolygon1221_tooltip"><![CDATA[220]]></data>
+  <data name="ru_spotpolygon1222_tooltip"><![CDATA[Парикхмахерская]]></data>
 
 
-  <data name="ru_pano61_title"><![CDATA[Парикхмахерская]]></data>
-  <data name="ru_spotpolygon63_tooltip"><![CDATA[220 кабинет]]></data>
-  <data name="ru_spotpolygon232_tooltip"><![CDATA[Кабинет 2]]></data>
+  <data name="ru_pano1217_title"><![CDATA[Парикхмахерская]]></data>
+  <data name="ru_spotpolygon1223_tooltip"><![CDATA[2 кабинет]]></data>
+  <data name="ru_spotpolygon1224_tooltip"><![CDATA[220]]></data>
 
 
 

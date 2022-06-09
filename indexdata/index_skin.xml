@@ -880,18 +880,18 @@ if (device.desktop,
 	</settings>
 	<internaldata>
 				<group name="group_1"
-						titleID="panogroup39_title"
+						titleID="panogroup1215_title"
 						thumbnail=""
 						subMenu="false"
-						cssClass="panogroup39"> 
+						cssClass="panogroup1215"> 
 
 				
 				
 						<item name="group_1_item_1"
-							action="invokeKrFunction('mainloadscene', 'pano37')"
-								titleID="pano37_title"
+							action="invokeKrFunction('mainloadscene', 'pano1214')"
+								titleID="pano1214_title"
 								thumbnail=""
-							cssClass="pano37">
+							cssClass="pano1214">
 						
 						
 						</item>
@@ -901,18 +901,18 @@ if (device.desktop,
 				
 				</group>
 				<group name="group_2"
-						titleID="panogroup40_title"
+						titleID="panogroup1218_title"
 						thumbnail=""
 						subMenu="false"
-						cssClass="panogroup40"> 
+						cssClass="panogroup1218"> 
 
 				
 				
 						<item name="group_2_item_1"
-							action="invokeKrFunction('mainloadscene', 'pano38')"
-								titleID="pano38_title"
+							action="invokeKrFunction('mainloadscene', 'pano1216')"
+								titleID="pano1216_title"
 								thumbnail=""
-							cssClass="pano38">
+							cssClass="pano1216">
 						
 						
 						</item>
@@ -922,18 +922,18 @@ if (device.desktop,
 				
 				</group>
 				<group name="group_3"
-						titleID="panogroup62_title"
+						titleID="panogroup1219_title"
 						thumbnail=""
 						subMenu="false"
-						cssClass="panogroup62"> 
+						cssClass="panogroup1219"> 
 
 				
 				
 						<item name="group_3_item_1"
-							action="invokeKrFunction('mainloadscene', 'pano61')"
-								titleID="pano61_title"
+							action="invokeKrFunction('mainloadscene', 'pano1217')"
+								titleID="pano1217_title"
 								thumbnail=""
-							cssClass="pano61">
+							cssClass="pano1217">
 						
 						
 						</item>
@@ -995,55 +995,6 @@ if (device.desktop,
 	onTourStart="showKolorMenu_panoramaMenu();"
 	changetourlanguage="changeLanguage_panoramaMenu"
 />
-
-<!-- ********** -->
-<!-- FPS (frames per second) -->
-<!-- id : fps -->
-<!--
-	fps (frames per second) xml plugin
-	- this plugin shows the current average rendering frame-rate 
-	- krpano 1.18
--->
-<!-- ********** -->
-
-	<action name="fps_install" autorun="preinit">
-		delayedcall(1.0,
-			addlayer(fps);
-			set(layer[fps].keep, true);
-			set(layer[fps].x, 10);
-			set(layer[fps].y, 10);
-			set(layer[fps].align, bottomright);
-			set(layer[fps].alpha, 1);
-			set(layer[fps].css, 'font-family:Arial;font-size:12px;font-weight:bold;color:#ffffff;text-align:right;');
-			set(layer[fps].textshadow, 0.1);
-			set(layer[fps].zorder, 7);
-			set(layer[fps].background, false);
-			set(layer[fps].parent, STAGE);
-			set(layer[fps].enabled, false);
-			set(layer[fps].url, '%FIRSTXML%/graphics/textfield.swf');
-			fps_update();
-		);
-	</action>
-	
-	<action name="fps_update">
-		copy(tmp, display.currentfps);
-		roundval(tmp);
-		txtadd(layer[fps].html, 'FPS: ', get(tmp));
-		delayedcall(0.5, fps_update());
-	</action>
-
-<!-- ********** -->
-<!-- Previous/Next Keys -->
-<!-- id : prevNextKeys -->
-<!-- ********** -->
-
-
-<events name="prevNextKeysEvents" 
-	keep="true" 
-	onkeyup="if(keycode == 33,loadPreviousScene();
-,if(keycode == 34,loadNextScene();
-););" 
-	/>
 
 <action name="setViewNormal">
 	stopSetViewTweens();
